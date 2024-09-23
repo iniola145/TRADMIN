@@ -154,7 +154,7 @@ const Dashboard = () => {
                   fontWeight="bold"
                   color={colors.greenAccent[500]}
                 >
-                  $59,342.32
+                   ₦590,342.32
                 </Typography>
               </Box>
               <Box>
@@ -242,7 +242,7 @@ const Dashboard = () => {
                 color={colors.greenAccent[500]}
                 sx={{ mt: "15px" }}
               >
-                $48,352 revenue generated
+                 ₦480,352 revenue generated
               </Typography>
               <Typography>Includes extra misc expenditures and costs</Typography>
             </Box>
