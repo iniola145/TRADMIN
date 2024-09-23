@@ -30,13 +30,13 @@ const Invoices = () => {
             headerName: "Cost",
             renderCell: (params) => (
                 <Typography color={colors.greenAccent[500]}>
-                    ${params.row.cost}
+                    ₦{params.row.cost}
                 </Typography>
             ),
         },
         {
             field: "date",
-            headerName: "Balance",
+            headerName: "Date",
             flex: 1,
         },
 

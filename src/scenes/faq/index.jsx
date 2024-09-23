@@ -16,7 +16,7 @@ const FAQ = () => {
 
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography color={colors.greenAccent[500]} variant="h5">
+          <Typography sx={{color: '#517BF4'}} variant="h5">
             An Important Question
           </Typography>
         </AccordionSummary>
@@ -29,7 +29,7 @@ const FAQ = () => {
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography color={colors.greenAccent[500]} variant="h5">
+          <Typography sx={{color: '#517BF4'}} variant="h5">
             Another Important Question
           </Typography>
         </AccordionSummary>
@@ -42,7 +42,7 @@ const FAQ = () => {
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography color={colors.greenAccent[500]} variant="h5">
+          <Typography sx={{color: '#517BF4'}} variant="h5">
             Your Favorite Question
           </Typography>
         </AccordionSummary>
@@ -55,7 +55,7 @@ const FAQ = () => {
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography color={colors.greenAccent[500]} variant="h5">
+          <Typography sx={{color: '#517BF4'}} variant="h5">
             Some Random Question
           </Typography>
         </AccordionSummary>
@@ -68,7 +68,7 @@ const FAQ = () => {
       </Accordion>
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography color={colors.greenAccent[500]} variant="h5">
+          <Typography sx={{color: '#517BF4'}} variant="h5">
             The Final Question
           </Typography>
         </AccordionSummary>

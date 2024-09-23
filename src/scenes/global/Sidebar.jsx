@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
+// Import the image in the assests folder
+import Image from "../../assets/tradmin1.png";
+import Image2 from "../../assets/tradmin.png";
 // import 'react-pro-sidebar/dist/css/styles.css';
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -17,6 +20,7 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
@@ -78,12 +82,25 @@ const SidebarComponent = () => {
                                 display="flex"
                                 justifyContent="space-between"
                                 alignItems="center"
-                                ml="15px"
+                                ml="22px"
+                                mt="20px"
                             >
-                                <Typography variant="h3" color={colors.grey[100]}>TRADMIN</Typography>
-                                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                                    <MenuOutlinedIcon />
-                                </IconButton>
+                                {theme.palette.mode !== "dark" ? 
+                                <img
+                                    alt="profile-user"
+                                    width="150px" height="150px"
+                                    src={Image2}
+                                    style={{ cursor: "pointer", objectFit: "contain" }}
+                                />
+                                :
+                                <img
+                                    alt="profile-user"
+                                    width="150px" height="150px"
+                                    src={Image}
+                                    style={{ cursor: "pointer", objectFit: "contain" }}
+                                />
+                                }
+                                
                             </Box>
                         )}
                     </MenuItem>
@@ -96,12 +113,12 @@ const SidebarComponent = () => {
                                 justifyContent="center"
                                 alignItems="center"
                             >
-                                <img
+                                {/* <img
                                     alt="profile-user"
                                     width="100px" height="100px"
-                                    src={`../../assets/user.png`}
-                                    style={{ cursor: "pointer", borderRadius: "50%" }}
-                                />
+                                    // src={Image}
+                                    style={{ cursor: "pointer", borderRadius: "50%", objectFit: "cover" }}
+                                /> */}
                             </Box>
                             <Box textAlign="center">
                                 <Typography
@@ -116,7 +133,6 @@ const SidebarComponent = () => {
                             </Box>
                         </Box>
                     )}
-
                     {/* MENU ITEMS */}
                     <Box paddingLeft={isCollapsed ? undefined : "5%"}>
                         <Item
@@ -185,6 +201,13 @@ const SidebarComponent = () => {
                             title="Maps"
                             to="/map"
                             icon={<FmdGoodOutlinedIcon />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        />
+                        <Item
+                            title="Download"
+                            to="/download"
+                            icon={<CloudDownloadIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
